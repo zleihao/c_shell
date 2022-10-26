@@ -4,7 +4,7 @@ TARGET = shell.out
 SRCS = $(shell find ./ -name "*.c")
 DIR = -I "./cmd" -I "./shell"
 
-$(TARGET): $(SRCS:.c = .o)
+$(TARGET): $(SRCS)
 	gcc $^ -o $@ $(DIR)
 
 #end
